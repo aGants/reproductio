@@ -1,0 +1,79 @@
+@import "vars.scss", "header-slick.scss";
+
+%first-column {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+%row {
+  grid-row-start: 2;
+  grid-row-end: -1;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 500px 1100px 350px;
+  grid-template-rows: 35px 720px 50px;
+  height: 820px;
+  
+  &-block {
+    @extend %first-column;
+    @extend %row;
+    padding-left: 30px;
+
+    &-text {
+      margin-bottom: 50px;
+      &__title {
+        font: $font-title;
+        margin-bottom: 20px;
+      }
+
+      &__subtitle {
+      font: $font-subtitle;
+      }
+    }
+
+    &-contact {
+      font: $font-text;
+      color: var(--sub-color);
+
+      &__address {
+        margin-bottom: 15px;
+        & span{
+          display: block;
+        }
+      }
+
+      &__mail {
+        display: block;
+        &:link, &:visited, &:hover, &:after {
+          color: var(--sub-color);
+          text-decoration: none;
+          list-style-type: none;
+        }
+      }
+    }
+  }
+
+  &-slider {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    @extend %row;
+  }
+
+  &-nav {
+    grid-column-start: -2;
+    grid-column-end: -1;
+    @extend %row;
+
+    &__item {
+        margin: -20px;
+        outline: none;
+        height: 260px;
+        &:active, &:focus {
+          outline: none;
+        }
+    }
+  }
+
+}

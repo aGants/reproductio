@@ -1,0 +1,70 @@
+@import "vars.scss";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 520px;
+  background-color: var(--second-color);
+  position: static; 
+
+  &-block {
+    &-text {
+      margin-bottom: 250px;
+      color: var(--first-color);
+        &__title {
+          font: $font-title;
+          margin-bottom: 20px;
+        }
+        &__subtitle {
+          font: $font-subtitle;
+
+        }
+    }
+    &-sub {
+      font: $font-text;
+      color: var(--sub-color);
+    }
+  }
+      &-input {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 440px;
+        margin: 0 100px;
+    
+        %input-style {
+          padding: 15px;
+          border-radius: 5px;
+          border: 2px var(--second-color) solid;
+          outline: none;
+          margin: 20px;
+        }
+
+        &__mail {
+          @extend %input-style;
+          height: 25px;
+          width: 440px;
+        }
+        &__text {
+          @extend %input-style;
+          height: 200px;
+          width: 440px;
+        }
+        &__send {
+          @extend %input-style;
+          width: 300px;
+          cursor: pointer;
+          color: var(--first-color);
+          background-color: var(--color-button);
+        }
+        &__title {
+          font: $font-title;
+          color: var(--color-send-text);
+        }
+        &__subtitle {
+          font: $font-subtitle;
+          color: var(--color-send-text);
+        }
+      }
+}
