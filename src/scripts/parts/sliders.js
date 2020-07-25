@@ -1,4 +1,5 @@
-$(document).ready(function () {
+function firstSlider() {
+  const $ = require('jquery');
   $('.header-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -13,11 +14,13 @@ $(document).ready(function () {
     focusOnSelect: true,
     vertical: true
   });
-});
 
-$(document).ready(function () {
   $('.main-slider').slick({
     slidesToShow: 3,
     centerMode: true
   });
-});
+};
+
+export default function initSliders() {
+  firstSlider();
+}
