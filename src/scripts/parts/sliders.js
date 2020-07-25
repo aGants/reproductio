@@ -1,5 +1,6 @@
 function firstSlider() {
   const $ = require('jquery');
+  require("slick-carousel");
   $('.header-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
