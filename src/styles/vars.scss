@@ -1,5 +1,5 @@
 $font-title: bold 4.5em/0.9em Roboto, Arial, sans-serif;
-$font-subtitle: 500 1.5em/1.3em Roboto, Arial, sans-serif;
+$font-subtitle: 400 1.5em/1.3em Roboto, Arial, sans-serif;
 $font-text: 500 1em/1.4em Roboto, Arial, sans-serif;
 
 :root {
@@ -8,5 +8,6 @@ $font-text: 500 1em/1.4em Roboto, Arial, sans-serif;
 --second-color: #000000;
 --color-button: #2400fe;
 --color-send-text: #03b300;
+--error-bg-color: #ffd5d6;
+--error-text-color: #c00000;
 }
-

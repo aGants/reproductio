@@ -1,70 +1,96 @@
 @import "vars.scss";
 
+%input-style {
+  padding: 15px;
+  border-radius: 5px;
+  border: 2px var(--second-color) solid;
+  outline: none;
+  margin: 10px;
+}
+
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 520px;
+  display: grid;
+  grid-template-columns: 50% 30% 20%;
+  grid-template-rows: 100px 260px 100px;
   background-color: var(--second-color);
-  position: static; 
 
   &-block {
+    margin-left: 15vw;
     &-text {
-      margin-bottom: 250px;
       color: var(--first-color);
-        &__title {
-          font: $font-title;
-          margin-bottom: 20px;
+      &__title {
+        font: $font-title;
+        grid-column-start: 1;
+        grid-row-start: 1;
         }
+        
         &__subtitle {
           font: $font-subtitle;
-
-        }
-    }
-    &-sub {
-      font: $font-text;
-      color: var(--sub-color);
-    }
-  }
-      &-input {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        width: 440px;
-        margin: 0 100px;
-    
-        %input-style {
-          padding: 15px;
-          border-radius: 5px;
-          border: 2px var(--second-color) solid;
-          outline: none;
-          margin: 20px;
-        }
-
-        &__mail {
-          @extend %input-style;
-          height: 25px;
-          width: 440px;
-        }
-        &__text {
-          @extend %input-style;
-          height: 200px;
-          width: 440px;
-        }
-        &__send {
-          @extend %input-style;
-          width: 300px;
-          cursor: pointer;
-          color: var(--first-color);
-          background-color: var(--color-button);
-        }
-        &__title {
-          font: $font-title;
-          color: var(--color-send-text);
-        }
-        &__subtitle {
-          font: $font-subtitle;
-          color: var(--color-send-text);
+          grid-column-start: 1;
+          grid-row-start: 2;
+          grid-row-end: 2;
         }
       }
+      &-sub {
+        font: $font-text;
+        color: var(--sub-color);
+        grid-column-start: 1;
+        grid-row-start: 3;
+        grid-row-start: 3;
+      }
+    }
+
+    &-input {
+      &__mail {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        @extend %input-style;
+        height: 25px;
+        width: 440px;
+      }
+
+      &__text {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        @extend %input-style;
+        height: 200px;
+        width: 440px;
+      }
+
+      &__send {
+        grid-column-start: 2;
+        grid-row-start: 3;
+        @extend %input-style;
+        width: 300px;
+        cursor: pointer;
+        color: var(--first-color);
+        background-color: var(--color-button);
+      }
+
+      &__title {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        font: $font-title;
+        font-size: 3.5em;
+        transform: rotate(-6deg);
+        color: var(--color-send-text);
+        text-align: left;
+      }
+
+      &__subtitle {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        font: $font-subtitle;
+        color: var(--color-send-text);
+      }
+    }
+    
+    &-error {
+      grid-column-start: 3;
+      grid-row-start: 1;
+      // visibility: hidden;
+      visibility: visible;
+      font: $font-text;;
+      color: var(--error-text-color);
+    }
 }
