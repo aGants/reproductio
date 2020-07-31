@@ -42,6 +42,12 @@ $footer-left-padding: 15vw;
     color: var(--sub-color);
     grid-column: 1;
     grid-row: 3;
+
+    &__rools {
+      &:hover, &:visited {
+        color: var(--sub-color);
+      }
+    }
     }
 
   &-input {
@@ -100,11 +106,14 @@ $footer-left-padding: 15vw;
     font: $popup-font;
     color: var(--second-color);
     background-color: var(--first-color);
+
     &__title {
       font-size: 1.8em;
     }
+
     &__text {
       margin-top: 15px;
+
       &-sub {
         display: block;
         margin: 5px 20px;
@@ -120,5 +129,6 @@ $footer-left-padding: 15vw;
   width: 30px;
   height: 30px;
   margin: 20px;
+  user-select: none;
   cursor: pointer;
 }
