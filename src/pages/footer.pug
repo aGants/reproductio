@@ -1,16 +1,17 @@
 footer.footer
-  .footer-block
-    .footer-block-text
-      h1.footer-block-text__title Написать нам
-      p.footer-block-text__subtitle Заполните форму справа
-      p.footer-block-text__subtitle или отправьте письмо на shop@reproduct.io
-    .footer-block-sub
-      p.footer-block-sub__text Репродукцио, 2019
-      a.footer-block-sub__rools Правила обработки персональных данных
+  .footer-text
+    h1.footer-text__title Написать нам
+    p.footer-text__subtitle Заполните форму справа
+    p.footer-text__subtitle или отправьте письмо на shop@reproduct.io
+  .footer-sub
+    p.footer-sub__text Репродукцио, 2019
+    a.footer-sub__rools(href='#rules') Правила обработки персональных данных
   .footer-input 
     input(type="text" name="text" placeholder="Эл. почта").footer-input__mail
     input(type="text" name="text" placeholder="Сообщение").footer-input__text
     input(type="button" value="Отправить сообщение").footer-input__send
   .footer-error
     p.footer-error__text Введите почту в формате
-    p.footer-error__text xxx@xxx.xxx
+    p.footer-error__text ×××@×××.×××
+  .footer-popup.mfp-hide#rules
+    include popup.pug

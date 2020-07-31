@@ -8,89 +8,117 @@
   margin: 10px;
 }
 
+$footer-left-padding: 15vw;
+
 .footer {
   display: grid;
-  grid-template-columns: 50% 30% 20%;
-  grid-template-rows: 100px 260px 100px;
+  grid-template-columns: 50% 25% 15%;
+  grid-template-rows: 100px 230px 100px;
+  gap: 15px;
   background-color: var(--second-color);
 
-  &-block {
-    margin-left: 15vw;
-    &-text {
-      color: var(--first-color);
-      &__title {
-        font: $font-title;
-        grid-column-start: 1;
-        grid-row-start: 1;
-        }
-        
-        &__subtitle {
-          font: $font-subtitle;
-          grid-column-start: 1;
-          grid-row-start: 2;
-          grid-row-end: 2;
-        }
-      }
-      &-sub {
-        font: $font-text;
-        color: var(--sub-color);
-        grid-column-start: 1;
-        grid-row-start: 3;
-        grid-row-start: 3;
-      }
-    }
-
-    &-input {
-      &__mail {
-        grid-column-start: 2;
-        grid-row-start: 1;
-        @extend %input-style;
-        height: 25px;
-        width: 440px;
-      }
-
-      &__text {
-        grid-column-start: 2;
-        grid-row-start: 2;
-        @extend %input-style;
-        height: 200px;
-        width: 440px;
-      }
-
-      &__send {
-        grid-column-start: 2;
-        grid-row-start: 3;
-        @extend %input-style;
-        width: 300px;
-        cursor: pointer;
-        color: var(--first-color);
-        background-color: var(--color-button);
-      }
-
-      &__title {
-        grid-column-start: 2;
-        grid-row-start: 1;
-        font: $font-title;
-        font-size: 3.5em;
-        transform: rotate(-6deg);
-        color: var(--color-send-text);
-        text-align: left;
-      }
-
-      &__subtitle {
-        grid-column-start: 2;
-        grid-row-start: 2;
-        font: $font-subtitle;
-        color: var(--color-send-text);
-      }
-    }
+  &-text {
+    padding-left: $footer-left-padding;
     
-    &-error {
-      grid-column-start: 3;
-      grid-row-start: 1;
-      // visibility: hidden;
-      visibility: visible;
-      font: $font-text;;
-      color: var(--error-text-color);
+    &__title {
+      grid-column: 1;
+      grid-row: 1;
+      margin-bottom: 20px;
+      font: $font-title;
+      color: var(--first-color);
+      }
+      
+      &__subtitle {
+        font: $font-subtitle;
+        color: var(--footer-sub-color);
+        grid-column: 1;
+        grid-row: 2;
+      }
     }
+
+  &-sub {
+    font: $font-text;
+    padding-left: $footer-left-padding;
+    color: var(--sub-color);
+    grid-column: 1;
+    grid-row: 3;
+    }
+
+  &-input {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    &__mail {
+      @extend %input-style;
+      height: 25px;
+      width: 90%;
+    }
+
+    &__text {
+      @extend %input-style;
+      height: 200px;
+      width: 90%;
+    }
+
+    &__send {
+      @extend %input-style;
+      margin-left: 40%;
+      width: 60%;
+      cursor: pointer;
+      color: var(--first-color);
+      background-color: var(--color-button);
+    }
+
+    &__title {
+      margin-bottom: 45px;
+      font: $font-title;
+      font-size: 3.5em;
+      transform: rotate(-6deg);
+      color: var(--color-send-text);
+      text-align: left;
+    }
+
+    &__subtitle {
+      font: $font-subtitle;
+      color: var(--color-send-text);
+    }
+  }
+    
+  &-error {
+    grid-column: 3;
+    grid-row: 1;
+    margin: 20px 10px;
+    visibility: hidden;
+    font: $font-text;;
+    color: var(--error-text-color);
+    }
+
+  &-popup {
+    position: relative;
+    width: 40%;
+    margin: auto;
+    padding: 60px 100px 100px 30px;
+    font: $popup-font;
+    color: var(--second-color);
+    background-color: var(--first-color);
+    &__title {
+      font-size: 1.8em;
+    }
+    &__text {
+      margin-top: 15px;
+      &-sub {
+        display: block;
+        margin: 5px 20px;
+      }
+    }
+  }
+}
+
+.mfp-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  margin: 20px;
+  cursor: pointer;
 }

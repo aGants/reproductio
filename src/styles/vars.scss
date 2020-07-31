@@ -1,6 +1,8 @@
 $font-title: bold 4.5em/0.9em Roboto, Arial, sans-serif;
 $font-subtitle: 400 1.5em/1.3em Roboto, Arial, sans-serif;
 $font-text: 500 1em/1.4em Roboto, Arial, sans-serif;
+$popup-font: 400 1em Roboto, Arial, sans-serif;
+
 
 :root {
 --sub-color: #606060;
@@ -10,4 +12,5 @@ $font-text: 500 1em/1.4em Roboto, Arial, sans-serif;
 --color-send-text: #03b300;
 --error-bg-color: #ffd5d6;
 --error-text-color: #c00000;
+--footer-sub-color: #9d9d9d
 }
