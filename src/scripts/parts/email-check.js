@@ -1,4 +1,4 @@
-function emailChecking() {
+export default function emailCheck() {
   const $        = require('jquery');
   let pattern  = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
   let mail       = $('.footer-input__mail');
@@ -34,8 +34,4 @@ function emailChecking() {
     $(".footer-input").html(`<h1 class="footer-input__title">Отправлено</h1>
   <p class="footer-input__subtitle">Мы ответим вам на почту <br> в течении нескольких дней </p>`);
   }
-}
-
-export default function Email() {
-  emailChecking();
 }

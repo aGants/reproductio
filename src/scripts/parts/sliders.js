@@ -1,4 +1,4 @@
-function firstSlider() {
+export default function initSliders() {
   const $ = require('jquery');
   require('slick-carousel');
   
@@ -23,7 +23,3 @@ function firstSlider() {
     centerMode: true
   });
 };
-
-export default function initSliders() {
-  firstSlider();
-}

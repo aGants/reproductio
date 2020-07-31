@@ -9,6 +9,13 @@
   position: relative;
 }
 
+.slick-slide {
+  outline: none;
+  &:active {
+  outline: none
+  }
+}
+
 .slick-arrow {
   position: absolute;
   top: 50%;
@@ -40,15 +47,21 @@
   }
   & .slick-track {
     display: flex;
-  }
+  }slick-slide:active
 }
 
 .header-nav {
+  &__item {
+    padding-bottom: 5px;
+    outline: none;
+    cursor: pointer;
+  }
+  
   & .slick-track {
     padding: 0 2vw;
     grid-column-start: -2;
     grid-column-end: -1;
     grid-row-start: 2;
-     height: 220px;
+    height: 220px;
   }
 }

@@ -64,15 +64,6 @@
     grid-column-start: -2;
     grid-column-end: -1;
     @extend %row;
-
-
-    &__item {
-        padding-bottom: 5px;
-        outline: none;
-        &:active, &:focus {
-          outline: none;
-        }
-    }
   }
 
 }
