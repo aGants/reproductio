@@ -16,8 +16,10 @@ export default function emailCheck() {
       if (mail.val().search(pattern) == 0) {
         mail = $('.footer-input__mail');
         $('.footer-error').css('visibility', 'hidden');
-        localStorage.setItem('person-mail', document.querySelector(".footer-input__mail").value);
-        toSubmit();
+        try {
+          localStorage.setItem('person-mail', document.querySelector(".footer-input__mail").value);
+        } catch (e) {}
+          toSubmit();
         mail.removeClass('error');
       } else showError();
     } else showError();
