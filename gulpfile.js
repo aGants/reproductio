@@ -57,11 +57,6 @@ function buildAssets() {
     .pipe(dest('build/assets/'));
 }
 
-function buildFonts() {
-  return src('src/fonts/**/*.*')
-    .pipe(dest('build/fonts'));
-}
-
 function buildScripts() {
   return src('src/scripts/script.js')
     .pipe(webpack({ output: { filename: 'bundle.js' }}))
@@ -89,7 +84,7 @@ exports.default =
     parallel(
       devServer,
       series(
-        parallel(buildPages, buildStyles, buildScripts, buildAssets, buildFonts),
+        parallel(buildPages, buildStyles, buildScripts, buildAssets),
         watchFiles
       )
     )
