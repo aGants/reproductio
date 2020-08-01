@@ -1,10 +1,12 @@
 const $ = require('jquery');
-import emailCheck       from './parts/email-check';
-import firstSlider from './parts/sliders';
+import emailCheck  from './parts/email-check';
+import initSliders from './parts/sliders';
+import imgLoading  from './parts/img-loading';
 import popUp       from './parts/popup';
 
 $(document).ready(() => {
   emailCheck();
-  Slider();
+  initSliders();
+  imgLoading();
   popUp();
 });

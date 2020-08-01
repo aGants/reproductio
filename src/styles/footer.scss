@@ -44,8 +44,11 @@ $footer-left-padding: 15vw;
     grid-row: 3;
 
     &__rools {
-      &:hover, &:visited {
+      &:visited {
         color: var(--sub-color);
+      }
+      &:hover {
+        color: var(--first-color);
       }
     }
     }

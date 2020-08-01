@@ -38,7 +38,7 @@
 
       &__address {
         margin-bottom: 15px;
-        & span{
+        & span {
           display: block;
         }
       }
@@ -49,6 +49,9 @@
           color: var(--sub-color);
           text-decoration: none;
           list-style-type: none;
+        }
+        &:hover {
+          color: var(--second-color);
         }
       }
     }

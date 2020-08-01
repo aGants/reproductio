@@ -15,7 +15,8 @@ export default function initSliders() {
     asNavFor: '.header-slider',
     centerMode: true,
     focusOnSelect: true,
-    vertical: true
+    vertical: true,
+    infinite: true
   });
 
   $('.main-slider').slick({
@@ -23,3 +24,4 @@ export default function initSliders() {
     centerMode: true
   });
 };
+
