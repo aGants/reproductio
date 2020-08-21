@@ -21,12 +21,11 @@ export default function initSliders() {
   });
 
   $('.main-slider').slick({
-    infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     arrows: true,
-    useTransform: false,
-    vertical: false
+    infinite: true,
+    initialSlide: 1,
   });
 };
 
