@@ -22,10 +22,10 @@ export default function initSliders() {
 
   $('.main-slider').slick({
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     arrows: true,
     infinite: true,
-    initialSlide: 1,
+    initialSlide: 0,
   });
 };
 

@@ -59,11 +59,39 @@
   &-slider {
     grid-column:2;
     @extend %row;
+    max-width: 1068px;
+    width: 50vw;
+
+    & .slick-arrow {
+      margin: 0 10px;
+      filter: brightness(70%);
+      cursor: pointer;
+
+      &:hover {
+        filter: none;
+      }
+    }
+
+    & .slick-track {
+      display: flex;
+    }
   }
 
   &-nav {
     grid-column: 3;
     @extend %row;
+    max-width: 300px;
+    margin: 0 auto;
+  
+    &__item {
+      padding-bottom: 5px;
+      outline: none;
+      cursor: pointer;
+  
+      & img {
+        max-width: 289px;
+      }
+    }
   }
 
 }

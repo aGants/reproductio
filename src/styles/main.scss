@@ -22,4 +22,30 @@ main {
         color: var(--footer-sub-color);
       }
     }
+  &-slider {
+    margin: 0 auto;
+
+    &__item img {
+      max-width: 400px;
+      max-height: 400px;
+    }
+
+    & .slick {
+      &-track {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 5vw;
+      }
+
+      &-active {
+        & img { box-shadow: 0 0 50px #831600; }
+        &+.slick-active img { box-shadow: 0 0 50px #003366; }
+        &+.slick-active+.slick-active img { box-shadow: 0 0 50px #336666;}
+      }
+
+    }
+  }
 }
+
+
