@@ -7,6 +7,9 @@ main {
 
 .main {
   height: 700px;
+  padding-top: 35px;
+  padding-bottom: 50px;
+  margin-bottom: -1px !important;
   &-text {
     &__title {
       margin-bottom: 20px;

@@ -19,6 +19,7 @@
     @extend %row;
 
     &-text {
+      padding-right: 1px;
       margin-bottom: 50px;
       &__title {
         font: $font-title;
