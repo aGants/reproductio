@@ -7,15 +7,6 @@
   position: relative;
 }
 
-.header-slider {
-  max-width: 1068px;
-  width: 50vw;
-}
-
-.header-nav {
-  max-width: 300px;
-  margin: 0 auto;
-}
 
 .slick-slide {
   outline: none;
@@ -45,6 +36,8 @@
 }
 
 .header-slider {
+  max-width: 1068px;
+  width: 50vw;
   & .slick-arrow {
     margin: 0 10px;
     filter: brightness(70%);
@@ -59,9 +52,23 @@
 }
 
 .header-nav {
+  max-width: 300px;
+  margin: 0 auto;
   &__item {
     padding-bottom: 5px;
     outline: none;
     cursor: pointer;
   }
+}
+
+.main-slider {
+  width: 700px;
+  margin: 0 auto;
+  &__item img {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+  }
+  
 }

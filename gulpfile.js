@@ -33,7 +33,7 @@ function devServer() {
 
 function buildPages() {
   return src('src/pages/index.pug')
-    .pipe(pug( /*{pretty: true}*/ ))
+    .pipe(pug())
     .pipe(typograf({
       locale: ['ru', 'en-US']
     }))
@@ -41,9 +41,9 @@ function buildPages() {
 }
 
 function buildStyles() {
-  return src('src/styles/*.scss')
+  return src('src/styles/style.scss')
     .pipe(sass())
-    .pipe(concat('style.css'))
+    // .pipe(concat('style.css'))
     .pipe(postcss([
       autoprefixer(),
       cssnano()
@@ -72,7 +72,7 @@ function clearBuild() {
 
 function watchFiles() {
   watch('src/pages/*.pug', buildPages);
-  watch('src/styles/*.scss', buildStyles);
+  watch('src/styles/***/*.scss', buildStyles);
   watch('src/scripts/**/*.js', buildScripts);
   watch('src/assets/**/*.*', buildAssets);
 }

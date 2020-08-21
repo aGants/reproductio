@@ -1,3 +1,5 @@
+include mixin
+
 header.header.container
   .header-block
     .header-block-text 
@@ -8,16 +10,12 @@ header.header.container
       span(itemprop='telephone').header-block-contact__number +7 812 960-22-01
       a(href = "mailto:shop@reproduct.io" itemprop='email').header-block-contact__mail shop@reproduct.io
   .header-slider
-    .header-slider__item 
-      img(data-src="assets/1-slider/serafim.jpg", src="assets/images/placeholder.jpg" alt="Шестикрылый Серафим" itemprop='makesOffer')
-    .header-slider__item 
-      img(data-src="assets/1-slider/christ.jpg", src="assets/images/placeholder.jpg" alt="Триумф Нептуна и Амфитриты" itemprop='makesOffer')
-    .header-slider__item 
-      img(data-src="assets/1-slider/triumf.jpg", src="assets/images/placeholder.jpg" alt="Явление Христа народу" itemprop='makesOffer')
+      - var classname = 'header-slider__item'
+      +image('1-slider/serafim.jpg', "Шестикрылый Серафим")
+      +image('1-slider/christ.jpg', "Триумф Нептуна и Амфитриты")
+      +image('1-slider/triumf.jpg', "Явление Христа народу")
   .header-nav
-    .header-nav__item 
-      img(data-src="assets/1-slider/m_serafim.jpg", src="assets/images/placeholder.jpg" alt="Шестикрылый Серафим" itemprop='makesOffer')
-    .header-nav__item 
-      img(data-src="assets/1-slider/m_christ.jpg", src="assets/images/placeholder.jpg" alt="Триумф Нептуна и Амфитриты" itemprop='makesOffer')
-    .header-nav__item 
-      img(data-src="assets/1-slider/m_triumf.jpg", src="assets/images/placeholder.jpg" alt="Явление Христа народу" itemprop='makesOffer')
+    - var classname = 'header-nav__item'
+    +image('1-slider/m_serafim.jpg', "Шестикрылый Серафим")
+    +image('1-slider/m_christ.jpg', "Триумф Нептуна и Амфитриты")
+    +image('1-slider/m_triumf.jpg', "Явление Христа народу")

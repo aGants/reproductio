@@ -1,0 +1,22 @@
+@import "vars.scss", "lib/slick.scss";
+
+
+main {
+  background: var(--second-color);
+}
+
+.main {
+  height: 700px;
+  &-text {
+    &__title {
+      margin-bottom: 20px;
+      font: $font-title;
+      color: var(--first-color);
+      }
+
+      &__subtitle {
+        font: $font-subtitle;
+        color: var(--footer-sub-color);
+      }
+    }
+}

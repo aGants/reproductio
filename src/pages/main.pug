@@ -1,2 +1,11 @@
-main.main.container
-  
+include mixin
+main
+  .main.container
+    .main-text
+      h1.main-text__title Популярное
+      p.main-text__subtitle Нестареющая классика и бестселлеры
+    .main-slider
+      - var classname = 'main-slider__item' 
+      +image('2-slider/devushka.jpg', 'Девушка с жемчужной серёжкой')
+      +image('2-slider/bonapart.jpg', 'Бонапарт на перевале')
+      +image('2-slider/ohotniki.jpg', 'Охотники на снегу')
