@@ -10,12 +10,16 @@
 
 $footer-left-padding: 15vw;
 
+footer {
+  width: 100%;
+  background-color: var(--second-color);
+}
+
 .footer {
   display: grid;
-  grid-template-columns: 50% 25% 15%;
+  grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 100px 230px 100px;
   gap: 15px;
-  background-color: var(--second-color);
 
   &-text {
     padding-left: $footer-left-padding;

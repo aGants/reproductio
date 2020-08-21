@@ -1,22 +1,21 @@
 @import "vars.scss", "header-slick.scss";
 
-%first-column {
-  grid-column-start: 1;
-}
-
 %row {
   grid-row-start: 2;
 }
 
 .header {
-  display: grid;
-  grid-template-columns: 25% 55% 20%;
-  grid-template-rows: 35px 720px 50px;
+  width: 100vw;
   height: 820px;
-  max-width: 100vw;
+  
+  &.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 35px 720px 50px;
+  }
   
   &-block {
-    @extend %first-column;
+    grid-column: 1;
     @extend %row;
     padding: 0 2vw;
 
@@ -58,14 +57,12 @@
   }
 
   &-slider {
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column:2;
     @extend %row;
   }
 
   &-nav {
-    grid-column-start: -2;
-    grid-column-end: -1;
+    grid-column: 3;
     @extend %row;
   }
 

@@ -8,6 +8,13 @@
 
 body {
   width: 100%;
-  margin: auto;
+  overflow-x: hidden;
+  margin: 0 auto;
   word-wrap: break-word;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow-x: hidden;
 }

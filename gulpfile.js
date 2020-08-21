@@ -41,7 +41,7 @@ function buildPages() {
 }
 
 function buildStyles() {
-  return src('src/styles/style.scss')
+  return src('src/styles/*.scss')
     .pipe(sass())
     .pipe(concat('style.css'))
     .pipe(postcss([

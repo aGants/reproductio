@@ -1,11 +1,20 @@
 .slick-list {
   overflow: hidden;
   padding: 0;
-  
 }
 
 .slick-slider {
   position: relative;
+}
+
+.header-slider {
+  max-width: 1068px;
+  width: 50vw;
+}
+
+.header-nav {
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 .slick-slide {
@@ -54,13 +63,5 @@
     padding-bottom: 5px;
     outline: none;
     cursor: pointer;
-  }
-  
-  & .slick-track {
-    padding: 0 2vw;
-    grid-column-start: -2;
-    grid-column-end: -1;
-    grid-row-start: 2;
-    height: 220px;
   }
 }

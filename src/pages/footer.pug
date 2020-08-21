@@ -1,17 +1,18 @@
-footer.footer
-  .footer-text
-    h1.footer-text__title Написать нам
-    p.footer-text__subtitle Заполните форму справа
-    p.footer-text__subtitle или отправьте письмо на shop@reproduct.io
-  .footer-sub
-    p.footer-sub__text Репродукцио, 2019
-    a.footer-sub__rools(href='#rules') Правила обработки персональных данных
-  .footer-input 
-    input(type="text" placeholder="Эл. почта" value='').footer-input__mail
-    textarea(type="text" placeholder="Сообщение").footer-input__text
-    input(type="button" value="Отправить сообщение").footer-input__send
-  .footer-error
-    p.footer-error__text Введите почту в формате
-    p.footer-error__text ×××@×××.×××
-  .footer-popup.mfp-hide#rules
-    include popup.pug
+footer
+  .footer.container
+    .footer-text
+      h1.footer-text__title Написать нам
+      p.footer-text__subtitle Заполните форму справа
+      p.footer-text__subtitle или отправьте письмо на shop@reproduct.io
+    .footer-sub
+      p.footer-sub__text Репродукцио, 2019
+      a.footer-sub__rools(href='#rules') Правила обработки персональных данных
+    .footer-input 
+      input(type="text" placeholder="Эл. почта" value='').footer-input__mail
+      textarea(type="text" placeholder="Сообщение").footer-input__text
+      input(type="button" value="Отправить сообщение").footer-input__send
+    .footer-error
+      p.footer-error__text Введите почту в формате
+      p.footer-error__text ×××@×××.×××
+    .footer-popup.mfp-hide#rules
+      include popup.pug

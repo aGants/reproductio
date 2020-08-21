@@ -16,7 +16,8 @@ export default function initSliders() {
     centerMode: true,
     focusOnSelect: true,
     vertical: true,
-    infinite: true
+    infinite: true,
+    useTransform: false
   });
 
   $('.main-slider').slick({
