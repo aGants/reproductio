@@ -30,6 +30,6 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "webpack-stream": "^5.2.1"
+    "webpack-stream": "^7.0.0"
   }
 }
